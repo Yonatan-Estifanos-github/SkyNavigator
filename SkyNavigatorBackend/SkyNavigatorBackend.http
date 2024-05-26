@@ -1,0 +1,6 @@
+@SkyNavigatorBackend_HostAddress = http://localhost:5111
+
+GET {{SkyNavigatorBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
