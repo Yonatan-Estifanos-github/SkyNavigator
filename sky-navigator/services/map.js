@@ -1,4 +1,3 @@
-// sky-navigator/src/components/Map.js
 import React, { useEffect, useState } from 'react';
 import { fetchSatellites } from '../services/api';
 
@@ -21,12 +20,17 @@ const Map = () => {
   return (
     <div>
       <h1>Satellite Map</h1>
-      {/* Render the map and satellites here */}
-      {satellites.map((satellite) => (
-        <div key={satellite.id}>
-          <p>{satellite.name}</p>
-        </div>
-      ))}
+      {satellites.length > 0 ? (
+        satellites.map((satellite) => (
+          <div key={satellite.id}>
+            <p>{satellite.name}</p>
+            <p>Latitude: {satellite.latitude}</p>
+            <p>Longitude: {satellite.longitude}</p>
+          </div>
+        ))
+      ) : (
+        <p>No satellite data available</p>
+      )}
     </div>
   );
 };
