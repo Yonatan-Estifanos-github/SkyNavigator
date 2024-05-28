@@ -1,0 +1,101 @@
+# Visual Studio files
+.vscode/
+.vs/
+*.suo
+*.user
+*.userossc
+*.sln.docstates
+*.log
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userossc
+*.sln.docstates
+
+# Auto-generated files
+Generated_Code/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# DotNetCore
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Visual Studio Code
+.vscode/
+
+# npm
+node_modules/
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Docker
+docker-compose.override.yml
+.docker/
+Dockerfile
+
+# Webpack
+.parcel-cache/
+dist/
+build/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# SkyNavigatorBackend specific
+SkyNavigatorBackend/obj/
+SkyNavigatorBackend/bin/
+SkyNavigatorBackend/Debug/
+SkyNavigatorBackend/Release/
+
+# Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Other
+.idea/
+*.swp
+*~
+.project
+.classpath
+.c9/
+.settings/
+*.launch
