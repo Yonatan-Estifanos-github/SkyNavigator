@@ -1,25 +1,16 @@
-version: '3.9'
+version: '3.8'
 
 services:
-  frontend:
-    build:
-      context: ./sky-navigator
-    ports:
-      - "5000:80"
-
   backend:
     build:
       context: ./SkyNavigatorBackend
     ports:
       - "5001:80"
-    depends_on:
-      - postgres
-
-  postgres:
-    image: postgres:latest
-    environment:
-      POSTGRES_DB: test_db
-      POSTGRES_USER: test_user
-      POSTGRES_PASSWORD: test_pass
+  
+  frontend:
+    build:
+      context: ./sky-navigator
     ports:
-      - "5432:5432"
+      - "3000:80"
+    depends_on:
+      - backend
