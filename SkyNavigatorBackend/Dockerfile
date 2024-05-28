@@ -11,9 +11,6 @@ RUN dotnet restore
 # Copy the rest of the application code
 COPY . .
 
-# Remove the obj and bin directories if they exist
-RUN rm -rf obj bin
-
 # Build and publish the application
 RUN dotnet publish -c Release -o /app
 
@@ -25,6 +22,9 @@ WORKDIR /app
 
 # Copy the built application from the build stage
 COPY --from=build /app ./
+
+# Set the ASP.NET Core URLS environment variable
+ENV ASPNETCORE_URLS=http://+:80
 
 # Expose the port the API runs on
 EXPOSE 80
