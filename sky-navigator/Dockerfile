@@ -16,7 +16,7 @@ COPY . .
 # Build the React application
 RUN npm run build
 
-# Use a smaller image to serve the build
+# Tag this build as frontend:0.0.2
 FROM nginx:alpine
 
 # Copy the build output to the nginx html directory

@@ -14,7 +14,7 @@ COPY . .
 # Build and publish the application
 RUN dotnet publish -c Release -o /app
 
-# Use the official .NET runtime 8.0 image to run the application
+# Tag this build as backend:0.0.2
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 
 # Set the working directory

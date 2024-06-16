@@ -4,13 +4,17 @@ services:
   backend:
     build:
       context: ./SkyNavigatorBackend
+      dockerfile: Dockerfile
+    image: backend:0.0.1
     ports:
       - "5001:80"
   
   frontend:
     build:
       context: ./sky-navigator
+      dockerfile: Dockerfile
+    image: frontend:0.0.1
     ports:
-      - "3000:80"
+      - "3006:80"
     depends_on:
       - backend
